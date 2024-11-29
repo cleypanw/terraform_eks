@@ -12,6 +12,9 @@ resource "aws_ecr_repository" "ecr" {
     encryption_type = "KMS"
   }
   force_delete = true
+  tags = {
+    nils = "custom"
+  }
 }
 
 resource "aws_ecr_lifecycle_policy" "ecr" {
